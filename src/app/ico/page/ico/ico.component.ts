@@ -14,6 +14,7 @@ export class IcoComponent implements OnInit {
   constructor(private icoService: IcoService) { }
 
   ngOnInit() {
+    //TODO fix any
     this.icoService.getICOs().then((Ico: any) => {
         console.log(Ico);
         if (Ico) {
