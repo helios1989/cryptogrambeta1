@@ -13,13 +13,17 @@ import { NavtoolbarComponent } from './component/navtoolbar/navtoolbar.component
 import { IcoModuleRouting } from './ico/routes/ico/ico.routing.module';
 import { IcoComponent } from './ico/page/ico/ico.component';
 import { IcoService } from './ico/service/ico.service';
-
+//fake backedn 
+import { fakeBackendProvider } from '../app/helpers/fakebackend';
+import { LoginComponent } from './component/login/login.component';
+import { AuthenticationService } from './authentication/authentication.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavtoolbarComponent,
-    IcoComponent
+    IcoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,7 @@ import { IcoService } from './ico/service/ico.service';
     IcoModuleRouting,
     HttpModule
   ],
-  providers: [IcoService],
+  providers: [IcoService, fakeBackendProvider, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
