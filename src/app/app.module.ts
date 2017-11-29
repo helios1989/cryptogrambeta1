@@ -35,9 +35,9 @@ import { AuthGuard } from './guards/auth.guard';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    HttpModule,
     AppRoutingModule,
-    IcoModuleRouting,
-    HttpModule
+    IcoModuleRouting
   ],
   providers: [IcoService, fakeBackendProvider, AuthenticationService, MockBackend, AuthGuard],
   bootstrap: [AppComponent]
